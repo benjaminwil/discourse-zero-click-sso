@@ -3,7 +3,7 @@ en:
     admin:
       site_settings:
         categories:
-          TODO_plugin_name: "Plugin Name"
+          zero_click_sso: "Zero Click SSO"
   js:
-    discourse_plugin_name:
+    zero_click_sso:
       placeholder: placeholder

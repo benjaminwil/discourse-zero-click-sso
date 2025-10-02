@@ -1,4 +1,4 @@
-TODO_plugin_name:
-  plugin_name_enabled:
+zero_click_sso:
+  zero_click_sso_enabled:
     default: false
     client: true

@@ -1,4 +1,4 @@
-# **Plugin Name** Plugin
+# discourse-zero-click-sso
 
 **Plugin Summary**
 
