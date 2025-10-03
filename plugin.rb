@@ -18,9 +18,17 @@ module ::ZeroClickSso
   AUTH_ROUTES_PREFIX = "/auth/"
   IGNORED_ROUTES = ["/login", "/signup"]
 
+  # A list of supported SSO providers that this plugin supports and can attempt
+  # a zero-click login for.
+  SUPPORTED_PROVIDERS = ["google_oauth2"]
+
   def self.attemptable?
     return false if SiteSetting.enable_local_logins?
     return false unless Discourse.enabled_authenticators.one?
+
+    enabled_provider = Discourse.enabled_authenticators.first
+    return false if SUPPORTED_PROVIDERS.exclude?(enabled_provider.name)
+
     true
   end
 end
